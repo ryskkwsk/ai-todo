@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/ai-todo/',
+  base: process.env.GITHUB_ACTIONS ? '/ai-todo/' : '/',
 })
